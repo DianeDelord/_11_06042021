@@ -1,16 +1,11 @@
-import React from "react";
-import Apropos from "../pages/Apropos"
+import React from 'react';
 
-const {title, text} = Apropos.content
-console.log(title)
-console.log(text)
+const Bandeau = () => {
+    return (
+        <div>
+            
+        </div>
+    );
+};
 
-function getText(is_open) {
-    if (is_open) {
-        return <h1 className="title">{title}, {text}</h1>
-    } else {
-        return <h1 className="title">{title}</h1> 
-    }
-}
-
-export default getText()
+export default Bandeau;
