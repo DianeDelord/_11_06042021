@@ -1,5 +1,5 @@
-import React from "react"
-import Apropos from "../pages/A-propos"
+import React from "react";
+import Apropos from "../pages/Apropos"
 
 const {title, text} = Apropos.content
 console.log(title)

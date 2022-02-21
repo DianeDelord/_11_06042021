@@ -1,0 +1,45 @@
+/* header */
+.TopNav{
+    display: flex;
+  flex-direction: column;
+  }
+  .navMenu{
+    justify-content: space-between;
+    display: flex;
+    ul li:hover{
+      text-decoration: underline;
+    }
+    ul li:first-child{
+margin-right: 20px;
+    }
+  }
+  
+  ul{
+    display: flex;
+  }
+  li{
+    color:#FF6060;
+    list-style: none;
+  }
+  .navPicture{
+    justify-content: left;
+  }
+  .background-picture{
+    border-radius: 25px;
+    width: 100%;
+    object-fit: cover;
+    height: 223px;
+    filter: brightness(0.7);
+    margin: 35px 0 0 0;
+  }
+
+  .catchphrase{
+    text-transform: uppercase;
+    position: relative;
+    
+  color: white;
+  top: -150px;
+  right: -19%;
+  font-size: 2em;
+  font-weight: 500;
+  }

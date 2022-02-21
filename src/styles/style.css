@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  margin: 30px;
+}
+
+code {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* header */
+.TopNav {
+  display: flex;
+  flex-direction: column;
+}
+
+.navMenu {
+  justify-content: space-between;
+  display: flex;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  color: #FF6060;
+  list-style: none;
+}
+
+.navPicture {
+  justify-content: left;
+}
+
+.background-picture {
+  border-radius: 25px;
+  width: 100%;
+  object-fit: cover;
+  height: 223px;
+}
+
+.catchphrase {
+  text-transform: uppercase;
+  position: relative;
+  color: white;
+  top: -150px;
+  right: -19%;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.homecontainer {
+  width: 1240px;
+  height: 829px;
+  border-radius: 25px;
+  background-color: #F7F7F7;
+}
+
+.locCard {
+  width: 30%;
+  margin: 30px auto;
+  height: 340px;
+  border-radius: 10px;
+  background-color: #FF6060;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.dropdown {
+  background-color: var(--secondary-color);
+  margin-top: 33px;
+  border-radius: 6px;
+  overflow: hidden;
+  max-height: 35rem;
+  transition: max-height 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.dropdown.large {
+  width: 1024px;
+  margin-inline: auto;
+}
+
+.dropdown__label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+}
+
+.dropdown__label h3 {
+  font-weight: 500;
+  color: white;
+}
+
+.dropdown__label img {
+  transition: all 0.4s ease-in-out;
+}
+
+.dropdown__content {
+  padding: 2.2rem 1.5rem 1.2rem 1.7rem;
+  color: var(--primary-color);
+  font-size: 24px;
+}
+
+.arrow_down {
+  transform: rotate(180deg);
+}
+
+.dropdown__label h3,
+.small .dropdown__content {
+  font-size: 18px;
+}
+
+.dropdown__label,
+.closed {
+  max-height: 44px;
+}
+
+@media screen and (max-width: 767px) {
+  .dropdown {
+    margin-top: 25px;
+    overflow: hidden;
+    max-height: 35rem;
+  }
+
+  .dropdown.large {
+    width: unset;
+    margin-inline: unset;
+  }
+
+  .dropdown__label,
+.closed {
+    max-height: 30px;
+  }
+
+  .dropdown__label {
+    max-height: 30px;
+    padding: 0.5rem 0.9rem;
+    align-items: center;
+  }
+
+  .dropdown__label h3 {
+    font-size: 13px;
+  }
+
+  .dropdown__label img {
+    width: 1rem;
+  }
+
+  .dropdown__content {
+    font-size: 12px;
+    padding: 1rem;
+  }
+
+  .small .dropdown__content {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
