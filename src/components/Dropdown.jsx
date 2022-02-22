@@ -1,27 +1,33 @@
-import { useState } from 'react';
+import arrowUp from '../visuels/kasa-logo.svg';
 
-const Dropdown = ({ title, text, type = 'large' }) => {
-	const [isOpen, setIsOpen] = useState(false);
-	const img = `<i class="fas fa-chevron-up dropdown__ingredients_box-arrow"></i>`
+import { useState, useRef } from "react";
 
-	return (
-		<article
-			className={'dropdown ' + (type === 'large' ? 'large' : 'small') + (isOpen ? '' : ' closed')}
-			onClick={() => {
-				setIsOpen(!isOpen)
-			}}>
-			<div className='dropdown__label'>
-				<h3>{title}</h3>
-				<img
-					className={isOpen ? 'arrow_down' : ''}
-					src={img}
-					alt='chevron si on ouvre ou ferme le dropdown'>
-                         
-                    </img>
-			</div>
-			<div className='dropdown__content'>{text}</div>
-		</article>
-	);
-};
+function Dropdown({ title, content }) {
+  const [active, setActiveState] = useState("");
+
+  const contentActive = useRef(null);
+
+  //fonction qui change l'état au clic
+  // fonctionne comme un toggle
+  function handleCollapse() {
+    setActiveState(active === "" ? "active" : "");
+  }
+
+  return (
+    <div className={`container-collapse ${active}`}>
+      <button type="button" className="collapse" onClick={handleCollapse}>
+        {title}
+        <img
+          className="chevron-collapse"
+          src={arrowUp}
+          alt="open collapse"
+        />
+      </button>
+      <div ref={contentActive} className="content-collapse">
+        {content}
+      </div>
+    </div>
+  );
+}
 
 export default Dropdown;
