@@ -18,8 +18,7 @@ code {
 }
 
 .navMenu {
-  justify-content: space-between;
-  display: flex;
+  justify-content: flex-end;
 }
 
 ul {
@@ -218,6 +217,26 @@ li {
   .thumb__container {
     height: 255px;
     width: unset;
+  }
+}
+.footer {
+  padding: 2em 2em 1em 2em;
+  background-color: black;
+  text-align: center;
+}
+.footer #logo-footer {
+  width: 122px;
+  height: 39.44px;
+}
+.footer .copyright {
+  color: white;
+  font-size: 24px;
+}
+
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
+  .footer .copyright {
+    font-size: 12px;
   }
 }
 

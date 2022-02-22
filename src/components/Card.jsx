@@ -1,36 +1,45 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import FetchData from '../utils/FetchData';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const Card = () => {
-    const [data, setData] = useState([]);
+  const [apartments, setApartments] = useState([]);
 
-    useEffect(() => {
-        FetchData.get('datas-kasa.json')
-          .then(logements => {
-            setData(logements);
-            console.log(logements)
-          })
-      }, []);
+  useEffect(() => {
+    fetch("datas-kasa.json")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data)
+        setApartments(data);
+      })
+      .catch((error) => {
+        console.log("erreur dans la recup des datas");
+      });
+    return;
+  }, []);
 
-    return (
-        <div className='locCard'>
-            
-            {data && (
-          <section className='rental_card'>
-            {data.map((e) => (
-                <Link key={e.id} to={`/rental/${e.id}`} className='card_block'>
-                    <h3 className='card_title'> {e.title} </h3>
-                    <img src={e.cover} />
-                </Link>            
-            ))}
-          </section>
-        )}
-
-        </div>
-    );
+  return (
+    <div className="main-home">
+    <div className="container-apartment">
+      {apartments.map((apartment, index) => (
+        <Link key={index} to={`/rental/${apartment.id}`}>
+          <div className="apart-card">
+            <div
+              className="apart-card"
+              style={{
+                backgroundImage: `url(${apartment.cover})`,
+              }}
+            >
+              <h3 className="apart-card-title">{apartment.title}</h3>
+            </div>
+          </div>
+        </Link>
+      ))}
+  </div>
+    </div>
+    )
 };
 
 export default Card;
