@@ -158,6 +158,11 @@ code {
   display: block;
 }
 
+.container-collapseactive .collapse .chevron-collapse {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .content-collapseactive {
   background-color: #F7F7F7;
   color: #FF6060;

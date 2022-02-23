@@ -14,7 +14,7 @@ function Dropdown({ title, content }) {
   }
 
   return (
-    <div className={`container-collapse ${active}`}>
+    <div className={`container-collapse ${active} container-collapse${active}`}>
       <button type="button" className="collapse" onClick={handleCollapse}>
         {title}
         <img

@@ -34,7 +34,7 @@
       transition: transform 0.6s ease-in-out;
     }
     .active {
-      .chevron-collapse {
+      & .chevron-collapse {
         transform: rotate(180deg);
       }
       .content-collapse {
@@ -42,6 +42,12 @@
       }
     }
   }
+
+  .container-collapseactive {
+    & .collapse{
+  & .chevron-collapse{
+    transform: rotate(180deg);
+  }}}
 
   .content-collapseactive {
     background-color: #F7F7F7;
