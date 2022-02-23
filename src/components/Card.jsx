@@ -8,6 +8,7 @@ const Card = () => {
   useEffect(() => {
     fetch("datas-kasa.json")
       .then((res) => {
+        console.log(res)
         return res.json();
       })
       .then((data) => {
@@ -17,7 +18,6 @@ const Card = () => {
       .catch((error) => {
         console.log("erreur dans la recup des datas");
       });
-    return;
   }, []);
 
   return (

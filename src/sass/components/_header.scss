@@ -6,6 +6,7 @@
   .navMenu{
     justify-content: space-between;
     display: flex;
+    margin: 30px 50px;
     ul li:hover{
       text-decoration: underline;
     }
@@ -28,6 +29,7 @@ margin-right: 20px;
 
   .navPicture{
     justify-content: left;
+    margin: 0px 50px;
   }
   .background-picture{
     border-radius: 25px;

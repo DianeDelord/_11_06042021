@@ -13,6 +13,7 @@ const FetchData = {
           }
         })
         .then(data => {
+          console.log(data)
           resolve(data)
         })
         .catch(error => {

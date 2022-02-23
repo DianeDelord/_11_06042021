@@ -28,6 +28,7 @@ code {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 30px 50px;
 }
 
 .navMenu ul li:hover {
@@ -57,6 +58,7 @@ code {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
+  margin: 0px 50px;
 }
 
 .background-picture {
@@ -531,18 +533,7 @@ code {
 }
 
 .home__grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(0, 1fr))[3];
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem 2rem;
-  width: 100%;
-  justify-items: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding: 56px 50px;
-  border-radius: 10px;
-  background-color: var(--secondary-color);
+  margin: 0 50px 30px;
 }
 
 .thumb__container {

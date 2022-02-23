@@ -1,14 +1,5 @@
 .home__grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem 2rem;
-    width: 100%;
-    justify-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding: 56px 50px;
-    border-radius: 10px;
-    background-color: var(--secondary-color);
+    margin: 0 50px 30px;
   }
   
   .thumb__container {
