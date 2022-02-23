@@ -1,4 +1,4 @@
-import arrowUp from '../visuels/kasa-logo.svg';
+import arrowUp from '../visuels/arrowUp.svg';
 
 import { useState, useRef } from "react";
 
@@ -20,10 +20,10 @@ function Dropdown({ title, content }) {
         <img
           className="chevron-collapse"
           src={arrowUp}
-          alt="open collapse"
+          alt="dropdown déroulé"
         />
       </button>
-      <div ref={contentActive} className="content-collapse">
+      <div ref={contentActive} className={`content-collapse${active}`}>
         {content}
       </div>
     </div>
