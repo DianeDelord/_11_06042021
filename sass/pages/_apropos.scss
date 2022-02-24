@@ -1,0 +1,21 @@
+ /* Mobile : For screen smaller than 576px */
+ @media screen and (max-width: 576px) {
+    .navMenu{
+        margin: 15px;
+        & img{
+            width: 30%;
+        }
+    }
+
+    .navPicture{
+        margin: 15px;
+    }
+
+    .dropdown-about{
+        margin: 15px; 
+        & .container-collapse{
+            width: 100%;
+        }
+    }
+
+}

@@ -1,0 +1,13 @@
+ 
+ 
+ 
+ 
+ /* Mobile : For screen smaller than 375px */
+ @media screen and (max-width: 375px) {
+     .main{
+         margin: 0 10px;
+         & .rental{
+             width: 100%;
+         }
+     }
+ }
